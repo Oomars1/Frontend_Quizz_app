@@ -1,0 +1,164 @@
+:root {
+  font-family:  Avenir, Helvetica, Arial, sans-serif;
+  
+  color: rgba(255,255,255, 0.50);
+
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #0c223f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme {
+  background-color: white;
+  color: black;
+  h1 b , h4{
+    color: black;
+  }
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ← dos columnas iguales */
+  gap: 1rem;
+  align-items: flex-end;
+  
+}
+
+.presentacion{
+  margin-right: 2rem;
+  padding: 2rem;
+ 
+  margin-bottom: 11rem;
+  width: 500px;
+}
+
+.buttonsquizz{
+  margin-top: 12rem;
+  margin-right: 2rem;
+}
+
+h1 {
+  font-size: 3.2em;
+}
+h1 b{
+   color: white;
+   font-size: 0.85em;
+}
+
+h4{
+  color: rgba(255,255,255, 0.50)
+}
+
+img{
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+}
+
+.quizzJs, .quizzCss, .quizzHtml, .quizzAccesibilidad {
+  background-color: #153a6b;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer; /* ← Apunta visualmente que es clickeable */
+  transition: background-color 0.3s;
+}
+
+.quizz:hover {
+  background-color: #1d4b88;
+}
+.quizz a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 5rem;
+  right: 12rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #c832ff; /* Color morado como en tu imagen */
+}
+
+input:checked + .slider::before {
+  transform: translateX(25px);
+}
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Columna única */
+    place-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .presentacion,
+  .buttonsquizz {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .theme-toggle {
+    top: 0;
+    margin-top: 1rem;
+    right: 1rem;
+    justify-content: center;
+  }
+}
