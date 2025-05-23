@@ -1,8 +1,7 @@
 :root {
-  font-family:  Avenir, Helvetica, Arial, sans-serif;
-  
-  color: rgba(255,255,255, 0.50);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 
+  color: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -16,10 +15,23 @@ body {
 body.light-theme {
   background-color: white;
   color: black;
-  h1 b , h4{
+
+  h2 {
     color: black;
   }
 
+  h1 b,
+  h4 {
+    color: black;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
 }
 
 .grid-container {
@@ -27,18 +39,17 @@ body.light-theme {
   grid-template-columns: 1fr 1fr; /* ← dos columnas iguales */
   gap: 1rem;
   align-items: flex-end;
-  
 }
 
-.presentacion{
+.presentacion {
   margin-right: 2rem;
   padding: 2rem;
- 
+
   margin-bottom: 11rem;
   width: 500px;
 }
 
-.buttonsquizz{
+.buttonsquizz {
   margin-top: 12rem;
   margin-right: 2rem;
 }
@@ -46,22 +57,25 @@ body.light-theme {
 h1 {
   font-size: 3.2em;
 }
-h1 b{
-   color: white;
-   font-size: 0.85em;
+h1 b {
+  color: white;
+  font-size: 0.85em;
 }
 
-h4{
-  color: rgba(255,255,255, 0.50)
+h4 {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-img{
+img {
   height: 50px;
   width: 50px;
   border-radius: 8px;
 }
 
-.quizzJs, .quizzCss, .quizzHtml, .quizzAccesibilidad {
+.quizzJs,
+.quizzCss,
+.quizzHtml,
+.quizzAccesibilidad {
   background-color: #153a6b;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -80,16 +94,28 @@ img{
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  
 }
 
 .theme-toggle {
   position: absolute;
-  top: 5rem;
-  right: 12rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  top: 4em;
+  right: 10em;
   gap: 10px;
+}
+
+.container-toggle,
+.container-section {
+  display: flex;
+  align-items: center;
+}
+
+.container-section h2 {
+  transform: translateX(1rem);
+  color: #ffffff;
 }
 
 /* Toggle switch */
@@ -139,8 +165,11 @@ input:checked + .slider::before {
   transform: translateX(25px);
 }
 
+@media (max-width: 1000px) {
+  .container-section {
+    display: none;
+  }
 
-@media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr; /* Columna única */
     place-items: center;
@@ -156,9 +185,15 @@ input:checked + .slider::before {
   }
 
   .theme-toggle {
-    top: 0;
+    top: 1em;
     margin-top: 1rem;
-    right: 1rem;
+    left: 20em;
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    left: 8em;
   }
 }
