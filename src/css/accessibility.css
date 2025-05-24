@@ -1,3 +1,66 @@
+/* Global box-sizing para evitar desbordes por padding/margin */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #0c223f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme {
+  background-color: white;
+  color: black;
+  h1 b , h4{
+    color: black;
+  }
+
+}
+/* Estilos para escritorio (PC) */
+.acc-wrapper {
+  padding: 2rem;
+}
+
+.acc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.acc-section-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.acc-theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.acc-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.acc-presentacion {
+  margin-right: 2rem;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  width: 500px;
+}
+
+.acc-buttonsquizz {
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
 .accOptionLet {
   padding: 0.8rem 1rem;
   background-color: rgba(255, 255, 255, 0.884);
@@ -56,4 +119,49 @@ input[type="range"]::-webkit-slider-thumb {
   width: 12px;
   height: 12px;
   background: transparent;
+}
+
+/* Responsive para tablets y celulares */
+@media (max-width: 920px) {
+  .acc-grid-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    place-items: center;
+    text-align: center;
+  }
+
+  .acc-presentacion,
+  .acc-buttonsquizz {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .acc-presentacion {
+    margin-bottom: 2rem;
+  }
+
+  .accNextQuestion {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .accAsk {
+    font-size: x-large;
+  }
+
+  .accTxtOP {
+    font-size: large;
+  }
+
+  .accOptionLet {
+    font-size: large;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* Evitar desbordamiento horizontal en móvil */
+body {
+  overflow-x: hidden;
 }
