@@ -9,8 +9,20 @@ import { renderQuiz } from "./quiz.js";
 
 const app = document.querySelector("#app");
 
+// Función para aplicar tema guardado o por defecto
+// Función para aplicar tema guardado o por defecto
+function applyThemeFromStorage() {
+  const savedTheme = localStorage.getItem("theme"); // "light" o "dark" o null
+  if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+  } else {
+    document.body.classList.remove("light-theme");
+  }
+}
+
 export function renderHome(app) {
-  document.body.className = "";
+  // No borrar la clase del body aquí porque puede borrar el tema activo
+  // document.body.className = ""; // <-- elimina esta línea para mantener el tema activo
 
   app.innerHTML = `
   <div class="grid-container">
@@ -50,20 +62,25 @@ export function renderHome(app) {
       </section>
     </section>
   </div>
-`
-
+`;
 
   addHomeEventListeners();
 
-  // Vuelve a asignar evento toggle tema en home
+  // Asignar el estado actual del toggle según el tema activo
   const toggle = document.getElementById("toggle-theme");
   toggle.checked = document.body.classList.contains("light-theme");
+
+  // Evento toggle que además guarda la preferencia en localStorage
   toggle.addEventListener("change", () => {
     document.body.classList.toggle("light-theme");
+    if (document.body.classList.contains("light-theme")) {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
   });
 }
 
-// Función para agregar los eventos de los botones del Home
 function addHomeEventListeners() {
   document.querySelector(".quizzJs").addEventListener("click", () => {
     document.dispatchEvent(new CustomEvent("navigate", { detail: { page: "javascript" } }));
@@ -84,16 +101,19 @@ function addHomeEventListeners() {
   });
 }
 
-// Renderizamos Home por primera vez
+// Al iniciar la app, aplicar tema guardado
+applyThemeFromStorage();
+
+// Renderizar home inicialmente
 renderHome(app);
 
-// Toggle de tema
-const toggle = document.getElementById("toggle-theme");
-toggle.addEventListener("change", () => {
-  document.body.classList.toggle("light-theme");
-});
+// Nota: ya no necesitas el listener global aquí porque cada renderHome vuelve a asignar el toggle
+// Eliminar estas líneas para evitar duplicados:
+// const toggle = document.getElementById("toggle-theme");
+// toggle.addEventListener("change", () => {
+//   document.body.classList.toggle("light-theme");
+// });
 
-// Navegación entre secciones
 document.addEventListener("navigate", (e) => {
   const page = e.detail.page;
 
@@ -101,7 +121,7 @@ document.addEventListener("navigate", (e) => {
     case "html":
     case "css":
     case "javascript":
-      renderQuiz(app, page); // ← Aquí se renderiza el quiz según el tema
+      renderQuiz(app, page);
       break;
     case "accessibility":
       renderAccessibility(app);

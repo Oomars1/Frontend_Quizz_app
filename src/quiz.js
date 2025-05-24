@@ -124,6 +124,7 @@ export function renderQuiz(app, category) {
       document.dispatchEvent(
         new CustomEvent("navigate", { detail: { page: "home" } })
       );
+      document.body.classList.remove("quiz-body");
     });
   }
 
