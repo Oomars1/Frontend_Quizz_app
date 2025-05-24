@@ -1,0 +1,268 @@
+export const questionsByCategory = {
+  html: [
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué etiqueta define una tabla?",
+      options: ["&lt;table&gt;", "&lt;tab&gt;", "&lt;tb&gt;", "&lt;thead&gt;"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué etiqueta define una lista desordenada?",
+      options: ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;dl&gt;"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué etiqueta se usa para insertar una imagen?",
+      options: ["&lt;image&gt;", "&lt;img&gt;", "&lt;src&gt;", "&lt;pic&gt;"],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué atributo define un texto alternativo en una imagen?",
+      options: ["alt", "title", "src", "desc"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cómo se define un comentario en HTML?",
+      options: [
+        "// comentario",
+        "/* comentario */",
+        "&lt;!-- comentario --&gt;",
+        "# comentario",
+      ],
+      answer: 2,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué etiqueta representa una división genérica?",
+      options: [
+        "&lt;section&gt;",
+        "&lt;div&gt;",
+        "&lt;span&gt;",
+        "&lt;container&gt;",
+      ],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué significa HTML?",
+      options: [
+        "HyperText Markup Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language",
+        "HighText Machine Language",
+      ],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué etiqueta se usa para crear un enlace?",
+      options: ["&lt;link&gt;", "&lt;a&gt;", "&lt;href&gt;", "&lt;url&gt;"],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cuál es el atributo correcto para una imagen?",
+      options: ["src", "href", "link", "path"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué etiqueta define una lista ordenada?",
+      options: ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;li&gt;", "&lt;dl&gt;"],
+      answer: 1,
+    },
+  ],
+  css: [
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué propiedad se utiliza para cambiar el color del texto?",
+      options: ["font-color", "text-color", "color", "text-style"],
+      answer: 2,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cómo se selecciona un elemento con id 'titulo'?",
+      options: ["#titulo", ".titulo", "titulo", "*titulo"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué propiedad se usa para cambiar el tamaño de fuente?",
+      options: ["font-weight", "font-size", "text-size", "text-style"],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué significa CSS?",
+      options: [
+        "Cascading Style Sheets",
+        "Computer Style Sheets",
+        "Creative Style Syntax",
+        "Custom Style System",
+      ],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cuál es la propiedad para establecer el fondo?",
+      options: ["background", "color", "bgcolor", "background-color"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué símbolo se usa para seleccionar una clase?",
+      options: [".", "#", "*", "%"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cómo se aplica una hoja de estilo externa?",
+      options: [
+        "&lt;link rel='stylesheet' href='style.css'&gt;",
+        "&lt;style src='style.css'&gt;",
+        "&lt;stylesheet&gt;style.css&lt;/stylesheet&gt;",
+        "&lt;script src='style.css'&gt;",
+      ],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué propiedad se usa para alinear texto al centro?",
+      options: ["text-align", "align", "center", "text-position"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cuál es la unidad relativa en CSS?",
+      options: ["px", "em", "pt", "cm"],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué propiedad cambia el margen exterior de un elemento?",
+      options: ["padding", "border", "spacing", "margin"],
+      answer: 3,
+    },
+  ],
+  javascript: [
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cómo se declara una variable en JavaScript?",
+      options: ["let myVar;", "variable myVar;", "v myVar;", "define myVar;"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué método se usa para mostrar datos en consola?",
+      options: ["console.show()", "log.console()", "console.log()", "print()"],
+      answer: 2,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cuál no es un tipo de dato primitivo?",
+      options: ["String", "Number", "Object", "Boolean"],
+      answer: 2,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cómo se escribe un comentario de una línea?",
+      options: [
+        "# comentario",
+        "// comentario",
+        "/* comentario */",
+        "<!-- comentario -->",
+      ],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué instrucción detiene un bucle?",
+      options: ["exit", "stop", "break", "halt"],
+      answer: 2,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cuál es el resultado de typeof null?",
+      options: ["null", "object", "undefined", "boolean"],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué método convierte una cadena a entero?",
+      options: ["parseString()", "parseInt()", "toInt()", "convertInt()"],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cómo se accede al primer elemento de un array?",
+      options: ["arr[0]", "arr(0)", "arr{0}", "arr.0"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué operador se usa para comparar valores estrictamente?",
+      options: ["==", "=", "===", "!==="],
+      answer: 2,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué palabra clave se usa para funciones?",
+      options: ["func", "function", "def", "method"],
+      answer: 1,
+    },
+  ],
+  accessibility: [
+    {
+      letter: ["A", "B", "C", "D"],
+      question:
+        "¿Qué atributo describe el contenido de una imagen para lectores de pantalla?",
+      options: ["title", "alt", "desc", "label"],
+      answer: 1,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Cuál de estas etiquetas mejora la navegación por teclado?",
+      options: ["&lt;div&gt;", "&lt;span&gt;", "&lt;button&gt;", "&lt;br&gt;"],
+      answer: 2,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué significa WCAG?",
+      options: [
+        "Web Content Accessibility Guidelines",
+        "Website Control Accessibility Group",
+        "Web Coordination Access Guidelines",
+        "Web Code Access Guide",
+      ],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question:
+        "¿Qué atributo permite describir elementos para tecnologías de asistencia?",
+      options: ["aria-label", "data-desc", "alt", "role"],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué etiqueta semántica representa el contenido principal?",
+      options: [
+        "&lt;main&gt;",
+        "&lt;body&gt;",
+        "&lt;section&gt;",
+        "&lt;div&gt;",
+      ],
+      answer: 0,
+    },
+    {
+      letter: ["A", "B", "C", "D"],
+      question: "¿Qué color de texto tiene mejor contraste sobre fondo negro?",
+      options: ["gris", "rojo", "blanco", "azul"],
+      answer: 2,
+    },
+  ],
+};

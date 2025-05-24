@@ -3,8 +3,6 @@ import javascriptLogo from "./assets/javascript.svg";
 import cssLogo from "./assets/css.square.svg";
 import htmlLogo from "./assets/html.svg";
 import accesibilidadLogo from "./assets/accessibility.svg";
-import { renderAccessibility } from "./accessibility.js";
-import { updateSectionHeader } from "./updateHeader.js";
 import { renderQuiz } from "./quiz.js";
 
 const app = document.querySelector("#app");
@@ -132,13 +130,13 @@ document.addEventListener("navigate", (e) => {
     case "accessibility":
       renderQuiz(app, page);
       break;
-    case "accessibility":
-      renderAccessibility(app);
-      updateSectionHeader({
-        title: "Accessibility",
-        icon: "./src/assets/accessibility.svg"
-      });
-      break;
+    // case "accessibility":
+    //   renderAccessibility(app);
+    //   updateSectionHeader({
+    //     title: "Accessibility",
+    //     icon: "./src/assets/accessibility.svg",
+    //   });
+    //   break;
     case "home":
     default:
       renderHome(app);
