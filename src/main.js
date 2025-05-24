@@ -129,13 +129,14 @@ document.addEventListener("navigate", (e) => {
     case "html":
     case "css":
     case "javascript":
+    case "accessibility":
       renderQuiz(app, page);
       break;
     case "accessibility":
       renderAccessibility(app);
       updateSectionHeader({
         title: "Accessibility",
-        icon: "./src/assets/accessibility.svg",
+        icon: "./src/assets/accessibility.svg"
       });
       break;
     case "home":
