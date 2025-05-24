@@ -1,8 +1,7 @@
 :root {
-  font-family:  Avenir, Helvetica, Arial, sans-serif;
-  
-  color: rgba(255,255,255, 0.50);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 
+  color: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -16,10 +15,10 @@ body {
 body.light-theme {
   background-color: white;
   color: black;
-  h1 b , h4{
+  h1 b,
+  h4 {
     color: black;
   }
-
 }
 
 .grid-container {
@@ -27,18 +26,17 @@ body.light-theme {
   grid-template-columns: 1fr 1fr; /* ← dos columnas iguales */
   gap: 1rem;
   align-items: flex-end;
-  
 }
 
-.presentacion{
+.presentacion {
   margin-right: 2rem;
   padding: 2rem;
- 
+
   margin-bottom: 11rem;
   width: 500px;
 }
 
-.buttonsquizz{
+.buttonsquizz {
   margin-top: 12rem;
   margin-right: 2rem;
 }
@@ -46,22 +44,25 @@ body.light-theme {
 h1 {
   font-size: 3.2em;
 }
-h1 b{
-   color: white;
-   font-size: 0.85em;
+h1 b {
+  color: white;
+  font-size: 0.85em;
 }
 
-h4{
-  color: rgba(255,255,255, 0.50)
+h4 {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-img{
+img {
   height: 50px;
   width: 50px;
   border-radius: 8px;
 }
 
-.quizzJs, .quizzCss, .quizzHtml, .quizzAccesibilidad {
+.quizzJs,
+.quizzCss,
+.quizzHtml,
+.quizzAccesibilidad {
   background-color: #153a6b;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -80,7 +81,6 @@ img{
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  
 }
 
 .theme-toggle {
@@ -139,8 +139,7 @@ input:checked + .slider::before {
   transform: translateX(25px);
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .grid-container {
     grid-template-columns: 1fr; /* Columna única */
     place-items: center;

@@ -83,22 +83,30 @@ export function renderHome(app) {
 
 function addHomeEventListeners() {
   document.querySelector(".quizzJs").addEventListener("click", () => {
-    document.dispatchEvent(new CustomEvent("navigate", { detail: { page: "javascript" } }));
+    document.dispatchEvent(
+      new CustomEvent("navigate", { detail: { page: "javascript" } })
+    );
   });
 
   document.querySelector(".quizzCss").addEventListener("click", () => {
-    document.dispatchEvent(new CustomEvent("navigate", { detail: { page: "css" } }));
+    document.dispatchEvent(
+      new CustomEvent("navigate", { detail: { page: "css" } })
+    );
   });
 
   document.querySelector(".quizzHtml").addEventListener("click", () => {
-    document.dispatchEvent(new CustomEvent("navigate", { detail: { page: "html" } }));
-  });
-
-  document.querySelector(".quizzAccesibilidad").addEventListener("click", () => {
     document.dispatchEvent(
-      new CustomEvent("navigate", { detail: { page: "accessibility" } })
+      new CustomEvent("navigate", { detail: { page: "html" } })
     );
   });
+
+  document
+    .querySelector(".quizzAccesibilidad")
+    .addEventListener("click", () => {
+      document.dispatchEvent(
+        new CustomEvent("navigate", { detail: { page: "accessibility" } })
+      );
+    });
 }
 
 // Al iniciar la app, aplicar tema guardado
@@ -127,7 +135,7 @@ document.addEventListener("navigate", (e) => {
       renderAccessibility(app);
       updateSectionHeader({
         title: "Accessibility",
-        icon: "./src/assets/accessibility.svg"
+        icon: "./src/assets/accessibility.svg",
       });
       break;
     case "home":
